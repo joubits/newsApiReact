@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const News = ( { news } ) => {
     // get data
@@ -25,13 +26,16 @@ const News = ( { news } ) => {
 
                 <div className="card-action">
                   <a href={url} target="_blank" rel="noopener noreferrer" className="waves-effect waves-light btn">
-                        Full news
+                        More Info
                   </a>
                 </div>
             </div>
         </div>
     )
 
+}
+News.propTypes = {
+    news: PropTypes.object.isRequired
 }
 
 
